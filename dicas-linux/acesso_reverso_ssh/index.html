@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang=pt-br><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Acesso Reverso com SSH - DirceuSilva.com</title>
+    <meta name="description" content="CONEXAO REVERSA POR SSH  PROBLEMA Você necessita acessar um determinado servidor que está protegido por firewall ou está atrás de um NAT e não possui IP público
+ SOLUÇÃO Utilizar um servidor de ponte para fazer uma conexão reversa
+ Considere para o exemplo:  ponte como o host em que ambos acessam (host na internet) escutando o ssh na porta 443 servidor, como sendo o host que vc quer acessar remotamente userponte : usuário utilizado para se conectar no host ponte Se necessário, você tem que liberar a porta no firewall no host ponte, neste exemplo estamos considerando a porta 10000  No servidor que vc quer acessar, execute: ssh -R 10000:localhost:22 userponte@ponte -p 443 Sendo:">
+    <link rel="canonical" href="https://dirceusilva.com/dicas-linux/acesso_reverso_ssh/">
+    <meta property="og:title" content="Acesso Reverso com SSH">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dirceusilva.com/dicas-linux/acesso_reverso_ssh/">
+    <meta property="og:description" content="CONEXAO REVERSA POR SSH  PROBLEMA Você necessita acessar um determinado servidor que está protegido por firewall ou está atrás de um NAT e não possui IP público
+ SOLUÇÃO Utilizar um servidor de ponte para fazer uma conexão reversa
+ Considere para o exemplo:  ponte como o host em que ambos acessam (host na internet) escutando o ssh na porta 443 servidor, como sendo o host que vc quer acessar remotamente userponte : usuário utilizado para se conectar no host ponte Se necessário, você tem que liberar a porta no firewall no host ponte, neste exemplo estamos considerando a porta 10000  No servidor que vc quer acessar, execute: ssh -R 10000:localhost:22 userponte@ponte -p 443 Sendo:">
+    <meta property="og:site_name" content="DirceuSilva.com">
+    <link rel="stylesheet" href="https://dirceusilva.com/css/main.min.87ce496d42e1f3a40d726a933dad86feb24d7358f07beff4011f81a327a17131.css" integrity="sha256-h85JbULh86QNcmqTPa2G/rJNc1jwe&#43;/0AR&#43;BoyehcTE=">
+    <meta name="generator" content="Hugo 0.76.5" />
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    
+</head>
+<body><header class="site-header">
+    <nav class="site-nav" role="navigation" aria-label="breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb"><li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://dirceusilva.com/">
+    <span itemprop="name">Index of ~</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li>/<li class="breadcrumb-item  " 
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://dirceusilva.com/dicas-linux/">
+    <span itemprop="name">dicas-linux</span>
+  </a>
+  <meta itemprop="position" content="0" />
+</li>/<li class="breadcrumb-item active hidden" aria-current="page"
+  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+  <a itemtype="https://schema.org/Thing" itemprop="item" href="https://dirceusilva.com/dicas-linux/acesso_reverso_ssh/">
+    <span itemprop="name">acesso_reverso_ssh</span>
+  </a>
+  <meta itemprop="position" content="1" />
+</li></ol>
+    </nav>
+    <h1 class="site-title hidden">
+		<a href="https://dirceusilva.com/">DirceuSilva.com</a>
+    </h1>
+</header>
+<main id="content">
+<article role="article" class="content post h-entry" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">        
+        <h2 class="post-title" itemprop="name headline">Acesso Reverso com SSH</h2>
+        <span class="post-meta">
+            <time class="date-published" datetime="2020-10-27T19:41:50&#43;07:00" itemprop="datePublished">
+                Tue, 27 Oct 2020
+            </time>
+            
+        </span>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+        <h1 id="conexao-reversa-por-ssh">CONEXAO REVERSA POR SSH</h1>
+<hr>
+<h3 id="problema">PROBLEMA</h3>
+<p>Você necessita acessar um determinado servidor que está
+protegido por firewall ou está atrás de um NAT e não possui IP público</p>
+<hr>
+<h3 id="solução">SOLUÇÃO</h3>
+<p>Utilizar um servidor de ponte para fazer uma conexão reversa</p>
+<hr>
+<h3 id="considere-para-o-exemplo">Considere para o exemplo:</h3>
+<ul>
+<li><strong>ponte</strong> como o host em que ambos acessam (host na internet) escutando o ssh na porta 443</li>
+<li><strong>servidor</strong>, como sendo o host que vc quer acessar remotamente</li>
+<li><strong>userponte</strong> : usuário utilizado para se conectar no host ponte</li>
+<li>Se necessário, você tem que liberar a porta no firewall no host ponte, neste exemplo estamos considerando a porta 10000</li>
+</ul>
+<h1 id="no-servidor-que-vc-quer-acessar-execute">No servidor que vc quer acessar, execute:</h1>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">ssh -R 10000:localhost:22 userponte@ponte -p 443
+</code></pre></div><p>Sendo:</p>
+<ul>
+<li>10000 -&gt; porta que deve estar liberada no servidor de ponte</li>
+<li>22 -&gt; porta que vai receber a conexao no servidor (exemplo, se vc se conecta neste servidor via ssh na porta 7777, vc deve alterar o 22 para 7777)</li>
+<li>userponte -&gt; Usuário para vc acessar o servidor ponte</li>
+<li>ponte -&gt; IP ou endereço de domínio do servidor ponte</li>
+<li>443 -&gt; Porta que vc utiliza para acessar o servidor ponte. Se for 22, altere o 443 para 22</li>
+</ul>
+<h1 id="na-ponte-para-voltar-na-conexao-execute">Na ponte (para voltar na conexao), execute:</h1>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">ssh localhost -p 10000
+</code></pre></div><p>Isso mesmo, aponte a conexão para localhost.</p>
+<p>E é isso :)</p>
+
+    </div>
+</article>
+<div class="pagination">
+    
+    
+</div>
+
+
+        </main><footer class="site-footer">
+	<span class="left">0.76.5  </span> 
+	<span class="right">
+		<em>DirceuSilva.com</em>
+	</span>
+</footer>
+</body>
+</html>
