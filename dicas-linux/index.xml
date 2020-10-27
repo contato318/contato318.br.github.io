@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dicas-linuxes on DirceuSilva.com</title>
-    <link>https://dirceusilva.com/dicas-linux/</link>
-    <description>Recent content in Dicas-linuxes on DirceuSilva.com</description>
+    <title>DirceuSilva.com</title>
+    <link>http://dirceusilva.com.br/dicas-linux/</link>
+    <description>Recent content on DirceuSilva.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <copyright>Copyright © 2020, Root; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 27 Oct 2020 19:41:50 -0200</lastBuildDate><atom:link href="https://dirceusilva.com/dicas-linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2020, Root; all rights reserved.</copyright><atom:link href="http://dirceusilva.com.br/dicas-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Acesso Reverso com SSH</title>
-      <link>https://dirceusilva.com/dicas-linux/acesso_reverso_ssh/</link>
+      <link>http://dirceusilva.com.br/dicas-linux/acesso_reverso_ssh/</link>
       <pubDate>Tue, 27 Oct 2020 19:41:50 -0200</pubDate>
       
-      <guid>https://dirceusilva.com/dicas-linux/acesso_reverso_ssh/</guid>
+      <guid>http://dirceusilva.com.br/dicas-linux/acesso_reverso_ssh/</guid>
       <description>CONEXAO REVERSA POR SSH  PROBLEMA Você necessita acessar um determinado servidor que está protegido por firewall ou está atrás de um NAT e não possui IP público
  SOLUÇÃO Utilizar um servidor de ponte para fazer uma conexão reversa
  Considere para o exemplo:  ponte como o host em que ambos acessam (host na internet) escutando o ssh na porta 443 servidor, como sendo o host que vc quer acessar remotamente userponte : usuário utilizado para se conectar no host ponte Se necessário, você tem que liberar a porta no firewall no host ponte, neste exemplo estamos considerando a porta 10000  No servidor que vc quer acessar, execute: ssh -R 10000:localhost:22 userponte@ponte -p 443 Sendo:</description>
