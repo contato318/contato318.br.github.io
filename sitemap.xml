@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://dirceusilva.com.br/dicas-linux/</loc>
+    <loc>/dicas-linux/</loc>
     <lastmod>2020-10-27T20:50:53-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/</loc>
+    <loc>/</loc>
     <lastmod>2020-10-27T20:47:28-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/dicas-kubernetes/</loc>
+    <loc>/dicas-kubernetes/</loc>
     <lastmod>2020-10-27T21:17:16-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/contato/</loc>
+    <loc>/contato/</loc>
     <lastmod>2020-10-27T20:50:53-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/readme/</loc>
+    <loc>/readme/</loc>
     <lastmod>2020-10-27T20:50:53-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/dicas-linux/acesso_reverso_ssh/</loc>
+    <loc>/dicas-linux/acesso_reverso_ssh/</loc>
     <lastmod>2020-10-27T20:47:55-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>http://dirceusilva.com.br/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
